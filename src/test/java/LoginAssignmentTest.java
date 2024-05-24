@@ -34,8 +34,8 @@ public class LoginAssignmentTest {
         Assertions.assertEquals(actualUrl, expectedUrl);
 
         //verifikasi dan validasi text "Congratulations"
-        String pageSource = driver.getPageSource();
-        Assertions.assertTrue(pageSource.contains("Congratulations"));
+        WebElement text = driver.findElement(By.xpath("//*[contains(text(), 'Congratulations')]"));
+        Assertions.assertTrue(text.isDisplayed());
 
         //verifikasi dan validasi button logout
         WebElement logoutButton = driver.findElement(By.xpath("//*[contains(text(), 'Log out')]"));

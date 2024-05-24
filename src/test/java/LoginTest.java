@@ -26,6 +26,7 @@ public class LoginTest {
         String actualUrl = driver.getCurrentUrl();
         Assertions.assertEquals(actualUrl, expectedUrl);
 
+        //verifikasi dan validasi text Products
         WebElement text = driver.findElement(By.xpath("//*[contains(text(), 'Products')]"));
         text.isDisplayed();
 
